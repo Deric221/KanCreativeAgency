@@ -1,6 +1,6 @@
 /********** Template CSS **********/
 :root {
-  --primary: #ff5947;
+  --primary: #ff2a12;
   --secondary: #555555;
   --light: #f1f3fa;
   --dark: #1c2035;
@@ -16,6 +16,10 @@
 
 .fw-medium {
   font-weight: 500;
+}
+
+#main-font {
+  font-family: "lato", sans-serif;
 }
 
 /*** Spinner ***/
@@ -141,8 +145,8 @@
 }
 
 .navbar .log {
-  max-width: 100px;
-  max-height: 100px;
+  max-width: 300px;
+  max-height: 200px;
 }
 
 /*** Header ***/
