@@ -39,52 +39,6 @@
         return false;
     });
 
-    //Form Submission 
-    function submitForm() {
-        // Get form data
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('mail').value;
-        const mobile = document.getElementById('mobile').value;
-        const service = document.getElementById('service').value;
-        const message = document.getElementById('message').value;
-
-        // Basic form validation (you can add more checks)
-        if (!name || !email || !mobile || !service || !message) {
-            alert('Please fill in all fields');
-            return;
-        }
-
-        // Prepare form data for submission
-        const formData = new FormData();
-        formData.append('name', name);
-        formData.append('mail', email);
-        formData.append('mobile', mobile);
-        formData.append('service', service);
-        formData.append('message', message);
-
-        // Send form data to the server using Fetch API
-        fetch('process_form.php', {
-            method: 'POST',
-            body: formData,
-        })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.text();
-        })
-        .then(data => {
-            // Handle the server response, e.g., show a success message
-            alert('Form submitted successfully');
-            // You can also redirect to a thank you page if needed
-            // window.location.href = 'index.html';
-        })
-        .catch(error => {
-            console.error('There was a problem with the fetch operation:', error);
-            // Handle the error, show an error message, etc.
-        });
-    }
-
 
     // Modal Video
     var $videoSrc;
